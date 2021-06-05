@@ -1,10 +1,12 @@
 :root {
   --light-teal: #4ab7e4;
   --dark-teal: #0088cc;
+  --enroll-text-shadow: 0 1px 1px #fdfdfd;
 }
 
 * {
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 img,
@@ -80,14 +82,14 @@ section p + form {
   padding: 1rem 0 3rem;
 }
 
-section form [type="submit"],
-section form [type="text"] {
+.enroll #layout form [type="submit"],
+.enroll #layout form [type="text"] {
   padding: 0.4em 0.6em;
   width: 100%;
   position: relative;
 }
 
-section form [type="submit"] {
+.enroll #layout form [type="submit"] {
   background-color: var(--light-teal);
   color: #000c;
   border: none;
@@ -97,8 +99,8 @@ section form [type="submit"] {
   transition-timing-function: ease-in-out;
   transition-property: background-color, color;
 }
-section form [type="submit"]:hover,
-section form [type="submit"]:focus {
+.enroll #layout form [type="submit"]:hover,
+.enroll #layout form [type="submit"]:focus {
   background-color: var(--dark-teal);
   color: #fafafa;
 }

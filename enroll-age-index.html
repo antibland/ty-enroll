@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>Techie Youth</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="generator" content="Vork 3.00" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../css/bare%EF%B9%961.css"
+      media="all"
+    />
+
+    <link rel="stylesheet" href="./enroll.css" media="all" />
+    <link rel="stylesheet" href="./enroll-age.css" media="all" />
+  </head>
+  <body class="enroll age">
+    <div id="layout">
+      <h1>How old are you?</h1>
+      <form action="/enroll/register" method="post">
+        <fieldset>
+          <div>
+            <input
+              type="submit"
+              value="I am between age 13 and 24"
+              class="submit"
+            />
+          </div>
+        </fieldset>
+      </form>
+      <form action="/enroll/over25" method="post">
+        <fieldset>
+          <div>
+            <input type="submit" value="I am age 25 or older" class="submit" />
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-167465498-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-167465498-1");
+    </script>
+  </body>
+</html>

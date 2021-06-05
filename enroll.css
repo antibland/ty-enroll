@@ -1,0 +1,120 @@
+:root {
+  --light-teal: #4ab7e4;
+  --dark-teal: #0088cc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+section iframe {
+  aspect-ratio: 2 / 1.8;
+  margin: 2rem 1rem;
+  text-align: center;
+  width: calc(50% - 2rem);
+}
+
+body {
+  font-size: clamp(1rem, -0.875rem + 8.333333vw, 1.1rem);
+}
+
+#layout {
+  text-align: center;
+  padding: 1rem 2rem 2rem;
+  max-width: 100%;
+  min-height: 100% !important;
+  height: auto !important;
+  width: min(70vw, 1080px);
+  margin: 0 auto;
+  background-color: beige;
+  transition: 0.3s width ease-in-out;
+}
+
+@media screen and (max-width: 750px) {
+  #layout {
+    width: calc(100% - 2rem);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  section iframe {
+    width: 100%;
+    margin: 0 auto 2rem;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+a[title="Facebook"] {
+  margin: 0 1rem 1rem 0;
+  display: inline-block;
+}
+
+section {
+  text-align: center;
+}
+
+section * {
+  text-align: left;
+}
+
+section form {
+  text-align: center;
+  position: relative;
+}
+
+section h3 + form {
+  padding: 2rem 0 0;
+}
+
+section p + form {
+  padding: 1rem 0 3rem;
+}
+
+section form [type="submit"],
+section form [type="text"] {
+  padding: 0.4em 0.6em;
+  width: 100%;
+  position: relative;
+}
+
+section form [type="submit"] {
+  background-color: var(--light-teal);
+  color: #000c;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  transition-property: background-color, color;
+}
+section form [type="submit"]:hover,
+section form [type="submit"]:focus {
+  background-color: var(--dark-teal);
+  color: #fafafa;
+}
+
+section fieldset {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.5rem 0;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 60%);
+  border-radius: 4px;
+  text-align: left;
+}
+
+section h2 {
+  margin-top: 3rem;
+  font-size: 1.7rem;
+}

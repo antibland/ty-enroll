@@ -1,6 +1,6 @@
-# Test files
-
 ## Enroll
+
+### Demo
 
 [/enroll](./enroll-index.html)
 
@@ -15,6 +15,8 @@
 ---
 
 ## Enroll Age Check (e.g How old are you?)
+
+### Demo
 
 [/enroll/age](./enroll-age-index.html)
 

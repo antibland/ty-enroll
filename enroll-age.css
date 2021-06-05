@@ -2,19 +2,21 @@
   background: url(https://assets.clickfunnels.com/images/blurredhandbg.png)
     transparent 0 0 no-repeat;
   background-size: cover;
+  min-height: 100vh;
+  padding-top: 3rem;
 }
 
 .enroll.age h1 {
-  font-size: clamp(2.2rem, -0.875rem + 8.333333vw, 3.6rem);
+  font-size: clamp(2.6rem, -0.875rem + 8.333333vw, 3.6rem);
   text-shadow: var(--enroll-text-shadow);
 }
 
 .enroll.age #layout {
   background-color: #f5f5dc38;
-  min-height: 100vh !important;
   display: grid;
   place-content: center;
   font-size: 200%;
+  border-radius: var(--enroll-border-radius);
 }
 
 .enroll.age fieldset {
@@ -26,7 +28,17 @@
 }
 
 @media screen and (max-width: 650px) {
+  .enroll.age {
+    padding-top: 0;
+  }
+
   .enroll.age #layout [type="submit"] {
     font-size: 1.1rem;
+  }
+
+  .enroll.age #layout {
+    min-height: 100vh !important;
+    padding: 0;
+    width: 100vw;
   }
 }

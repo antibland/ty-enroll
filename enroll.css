@@ -2,6 +2,7 @@
   --light-teal: #4ab7e4;
   --dark-teal: #0088cc;
   --enroll-text-shadow: 0 1px 1px #fdfdfd;
+  --enroll-border-radius: 4px;
 }
 
 * {
@@ -112,7 +113,7 @@ section fieldset {
   padding: 2rem;
   background-color: rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 2px rgb(0 0 0 / 60%);
-  border-radius: 4px;
+  border-radius: var(--enroll-border-radius);
   text-align: left;
 }
 

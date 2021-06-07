@@ -51,11 +51,15 @@ body {
 .full-width > .flex-row {
   max-width: var(--max-content-width);
   margin: 0 auto;
-  padding: 3rem 0;
+  padding: 3rem 1rem;
 }
 
 .enroll {
   background-color: var(--main-bgcolor);
+}
+
+.enroll .flex-col > *:last-child {
+  margin-bottom: 0;
 }
 
 .enroll section.enroll-2 {
@@ -103,7 +107,6 @@ body {
 }
 
 .enroll section.enroll-2 [type="submit"] {
-  font-size: 2rem;
   width: 100%;
   background-color: var(--default-blue);
 }
@@ -160,6 +163,7 @@ a[title="Twitter"] span {
 
 .enroll section h2 {
   font-size: 32px;
+  margin-top: 0;
 }
 
 .enroll section p {
@@ -168,14 +172,15 @@ a[title="Twitter"] span {
   line-height: 1.5;
 }
 
-.enroll section p:last-child {
-  margin-bottom: 0;
-}
-
 .enroll iframe {
   width: 100%;
-  aspect-ratio: 105 / 59;
-  height: auto;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .enroll iframe {
+    aspect-ratio: 105 / 59;
+    height: auto;
+  }
 }
 
 .enroll :is(h1) {
@@ -252,7 +257,6 @@ a[title="Twitter"] span {
 
 .enroll-2 [title^="Already signed up"] {
   color: var(--light-text);
-  margin-bottom: 1rem;
 }
 
 .enroll li.even,
@@ -300,6 +304,8 @@ a[title="Twitter"] span {
   width: 94%;
   margin: 0 auto;
   display: block;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .enroll [type="submit"].submit:hover {
@@ -315,6 +321,11 @@ a[title="Twitter"] span {
   gap: 0 2.65rem;
   position: relative;
   align-items: center;
+  padding: 0 1rem;
+}
+
+.flex-row.with-separator {
+  padding-bottom: 3rem;
 }
 
 .flex-row.with-separator::after {
@@ -340,9 +351,11 @@ a[title="Twitter"] span {
   flex: 1;
 }
 
-.flex-row.enroll-1 iframe {
-  aspect-ratio: 716 / 403;
-  height: auto;
+@supports (aspect-ratio: 1 / 1) {
+  .flex-row.enroll-1 iframe {
+    aspect-ratio: 716 / 403;
+    height: auto;
+  }
 }
 
 .flex-row.enroll-1 h3 {
@@ -375,11 +388,9 @@ a[title="Twitter"] span {
 
 /* End flex row */
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 900px) {
   .flex-row {
     display: block;
-    max-width: calc(100% - 20px) !important;
-    margin: 0 auto;
   }
 
   .enroll header h1 {
@@ -391,6 +402,45 @@ a[title="Twitter"] span {
   }
 
   .full-width:not(:last-of-type) > .flex-row {
-    padding: 1rem;
+    padding: 2rem 1rem 3rem;
+  }
+
+  .flex-row.with-separator {
+    padding-bottom: 2rem;
+  }
+
+  .flex-row.with-separator > .flex-col:first-child {
+    padding-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .enroll [type="submit"].submit {
+    font-size: 26px;
+  }
+
+  .enroll section.enroll-2 .bottom p:first-of-type {
+    padding: 0.5rem 1rem;
+  }
+
+  .enroll section h2 {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .enroll section p {
+    font-size: 17px;
+  }
+
+  .enroll header h1 {
+    font-size: 32px;
+  }
+
+  .enroll header h2 {
+    font-size: 23px;
+  }
+
+  .flex-row.enroll-1 h3 {
+    font-size: 21px;
   }
 }

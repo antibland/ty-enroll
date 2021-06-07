@@ -189,7 +189,7 @@ a[title="Twitter"] span {
 }
 
 .enroll header {
-  padding: 2rem 0;
+  padding: 1rem 0 0;
 }
 
 .enroll header > * {
@@ -353,6 +353,7 @@ a[title="Twitter"] span {
   text-align: center;
   line-height: 1.4;
   margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .flex-row.enroll-1 h3::after {
@@ -369,6 +370,7 @@ a[title="Twitter"] span {
   font-size: 18px;
   text-align: center;
   line-height: 1.5;
+  margin: 0 0 0.35rem;
 }
 
 /* End flex row */

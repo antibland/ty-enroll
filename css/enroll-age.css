@@ -1,0 +1,85 @@
+:root {
+  --light-teal: #4ab7e4;
+  --dark-teal: #0088cc;
+  --enroll-text-shadow: 0 1px 1px #fdfdfd;
+  --enroll-border-radius: 4px;
+}
+
+.enroll.age {
+  font-family: sans-serif;
+  background: url(https://assets.clickfunnels.com/images/blurredhandbg.png)
+    transparent 0 0 no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  padding-top: 3rem;
+}
+
+.enroll.age h1 {
+  font-size: clamp(2.6rem, -0.875rem + 8.333333vw, 3.6rem);
+  text-shadow: var(--enroll-text-shadow);
+}
+
+.enroll.age #layout {
+  background-color: #fffc;
+  display: grid;
+  place-content: center;
+  font-size: 200%;
+  border-radius: var(--enroll-border-radius);
+  text-align: center;
+  padding: 1rem 2rem 2rem;
+  max-width: 100%;
+  min-height: 100% !important;
+  height: auto !important;
+  width: min(70vw, 1080px);
+  margin: 0 auto;
+  background-color: beige;
+  transition: 0.3s width ease-in-out;
+}
+
+.enroll.age fieldset {
+  border: none;
+}
+
+.enroll.age #layout [type="submit"] {
+  font-size: 1.3rem;
+  border-radius: var(--enroll-border-radius);
+}
+
+.enroll #layout form [type="submit"],
+.enroll #layout form [type="text"] {
+  padding: 0.4em 0.6em;
+  width: 100%;
+  position: relative;
+}
+
+.enroll #layout form [type="submit"] {
+  background-color: var(--light-teal);
+  color: #000c;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  transition-property: background-color, color;
+}
+.enroll #layout form [type="submit"]:hover,
+.enroll #layout form [type="submit"]:focus {
+  background-color: var(--dark-teal);
+  color: #fafafa;
+}
+
+@media screen and (max-width: 650px) {
+  .enroll.age {
+    padding-top: 0;
+  }
+
+  .enroll.age #layout [type="submit"] {
+    font-size: 1.1rem;
+  }
+
+  .enroll.age #layout {
+    min-height: 100vh !important;
+    padding: 0;
+    width: 100vw;
+  }
+}

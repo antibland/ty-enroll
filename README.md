@@ -1,32 +1,20 @@
-## Enroll
+## Enroll Index
 
-### Demo
+[Demo](./enroll/index.html)
 
-[/enroll](./enroll-index.html)
-
-- uses
-  - `enroll.css`
+Uses [enroll-index.css](css/enroll-index.css)
 
 ### Recommendations
 
-- Replace `type="text"` with `type="email"` for built-in client-side validation
-- Add `required` attribute on each `input` to help prevent empty form submission
+- [x] Replace `type="text"` with `type="email"` for built-in client-side validation
+- [x] Add `required` attribute on each `input` to help prevent empty form submission
 
 ---
 
 ## Enroll Age Check (e.g How old are you?)
 
-### Demo
+[Demo](./enroll/age/index.html)
 
-[/enroll/age](./enroll-age-index.html)
-
-- uses
-  - `enroll.css`
-  - `enroll-age.css`
+Uses [enroll-age.css](css/enroll-age.css)
 
 ---
-
-## CSS
-
-- [/enroll => enroll.css](./enroll.css)
-- [/enroll/age => enroll-age.css](./enroll-age.css)

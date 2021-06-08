@@ -97,7 +97,7 @@ echo '<div class="flex-col flex-col-6-12">';
 echo $tools->youtube('dwW0qHEjQLU');
 echo '</div>';
 
-echo '</div>'; # end "flex-row"
+echo '</div>'; # end flex-row
 
 echo '<div class="flex-row">';
 
@@ -119,7 +119,7 @@ echo $html->linkList(array(
 ));
 echo '</div>';
 
-echo '</div>'; # end "flex-row"
+echo '</div>'; # end flex-row
 
 echo '</section>';
 

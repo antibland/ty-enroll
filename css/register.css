@@ -1,0 +1,122 @@
+:root {
+  --register-light-green: rgb(56, 242, 70);
+  --register-dark-green: rgb(11, 76, 16);
+  --register-text-shadow: 1px 1px 2px rgb(0 0 0 / 40%);
+  --regsiter-max-content-width: 1120px;
+  --register-time-remaining: rgb(16, 180, 255);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-family: sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0 5px 5px;
+  background: transparent url(/images/bg/blur-bg-register.jpeg) 50% 50%;
+  background-size: cover;
+}
+
+.register.container {
+  max-width: var(--regsiter-max-content-width);
+  width: 100%;
+  display: flex;
+  padding: 40px 20px;
+  margin: 0 auto;
+  border-color: rgb(33, 71, 120);
+  background-color: rgba(0, 0, 0, 0.63);
+  outline: none;
+  margin-top: 10px;
+  border-radius: 15px;
+  border: none;
+  border-top: 1px solid rgb(33, 71, 120);
+}
+
+.register.container > section {
+  flex: 1;
+}
+
+.register.container .right-section {
+  padding: 0 15px;
+}
+
+.register.container .left-section {
+  text-align: center;
+  padding: 0 35px;
+}
+
+.register.container .left-section > img {
+  max-width: 118px;
+}
+
+.register .free-callout {
+  color: white;
+  font-size: 32px;
+  background-color: var(--register-dark-green);
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  text-shadow: var(--register-text-shadow);
+  border-radius: 20px;
+}
+
+.register :is(h1, h2, h3) {
+  text-align: center;
+  margin: 0;
+  word-wrap: break-word;
+  text-shadow: var(--register-text-shadow);
+}
+
+.register h1,
+.register h2 {
+  font-size: 50px;
+}
+
+.register h1 {
+  color: var(--register-light-green);
+}
+
+.register h2 {
+  color: white;
+  margin-bottom: 1.5rem;
+  font-weight: normal;
+}
+
+.register .separator {
+  height: 1px;
+  background-color: rgb(255 255 255 / 41%);
+  border: none;
+  margin: 2.5rem 0 3rem;
+}
+
+.register .time-remaining-text {
+  font-size: 23px;
+  color: var(--register-time-remaining);
+}
+
+.register .time-remaining-text span {
+  display: block;
+}
+
+.register .tos {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+
+.register .tos:hover,
+.register .tos:focus {
+  text-decoration: underline;
+}
+
+.register h3 {
+  font-size: 40px;
+  margin-bottom: 1.5rem;
+  color: var(--register-light-green);
+}

@@ -31,10 +31,6 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-body {
-  margin: 0;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -56,6 +52,7 @@ body {
 
 .enroll {
   background-color: var(--main-bgcolor);
+  margin: 0;
 }
 
 .enroll .flex-col > *:last-child {
@@ -116,7 +113,7 @@ body {
 }
 
 /* Start Social */
-a[title="Facebook"] {
+.enroll a[title="Facebook"] {
   background: url(/images/icons/facebook.png);
   background-repeat: no-repeat;
   width: 111px;
@@ -124,7 +121,7 @@ a[title="Facebook"] {
   display: inline-block;
 }
 
-a[title="Twitter"] {
+.enroll a[title="Twitter"] {
   width: 90px;
   height: 33px;
   background-repeat: no-repeat;
@@ -132,13 +129,13 @@ a[title="Twitter"] {
   display: inline-block;
 }
 
-a[title="Facebook"] span,
-a[title="Twitter"] span {
+.enroll a[title="Facebook"] span,
+.enroll a[title="Twitter"] span {
   position: absolute;
   visibility: hidden;
 }
 
-[title^="Techie Youth privacy policy"] {
+.enroll [title^="Techie Youth privacy policy"] {
   color: var(--light-text);
   text-align: center;
   display: block;
@@ -248,7 +245,7 @@ a[title="Twitter"] span {
   margin-left: auto;
 }
 
-[title^="Already signed up"] {
+.enroll [title^="Already signed up"] {
   padding: 1rem;
   text-align: center;
   font-size: 16px;

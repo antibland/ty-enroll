@@ -19,7 +19,7 @@ html {
   font-family: sans-serif;
 }
 
-body {
+.register {
   padding: 0;
   margin: 0 5px 5px;
   background: transparent url(/images/bg/blur-bg-register.jpeg) 50% 50% fixed

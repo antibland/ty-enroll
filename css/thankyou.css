@@ -1,0 +1,159 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.thankyou {
+  box-sizing: border-box;
+  background: url(/images/bg/mountains.jpeg) transparent no-repeat 0 0 fixed;
+  background-size: cover;
+  min-height: 100vh;
+  text-align: center;
+  padding: 10px;
+}
+
+.thankyou .container {
+  padding-top: 35px;
+  outline: none;
+  background-color: rgba(178, 0, 0, 0.55);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100vw - 20px);
+  max-width: 1180px;
+  margin: 0 auto;
+  min-height: calc(100vh - 20px);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+@keyframes bounce-and-grow {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.thankyou h1 {
+  font-family: "Rock Salt", sans-serif;
+  color: white;
+  font-size: 60px;
+  text-align: center;
+  position: relative;
+  animation: 0.65s bounce-and-grow 0.25s;
+}
+
+.thankyou h1::after {
+  content: "";
+  border-bottom: 5px solid currentColor;
+  width: 80%;
+  transform: translateX(-50%);
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+}
+
+.thankyou .image-link-container {
+  display: flex;
+  align-items: center;
+  gap: 0 3rem;
+}
+
+.thankyou .image-link-container img {
+  max-width: 192px;
+}
+
+.thankyou .continue-to-registration {
+  white-space: nowrap;
+  margin-top: 15px;
+  outline: none;
+  cursor: pointer;
+  display: block;
+  background-color: rgb(248, 248, 248);
+  font-family: Graduate, Helvetica, sans-serif !important;
+  border-radius: 150px;
+  border-width: 5px;
+  border-style: solid;
+  font-weight: normal;
+  padding: 1rem 2.5rem;
+}
+
+.thankyou .continue-to-registration a {
+  text-decoration: none;
+  color: rgb(255, 28, 12);
+  font-size: 50px;
+  letter-spacing: 1px;
+  line-height: 1;
+  text-transform: capitalize;
+}
+
+.thankyou .continue-to-registration a:hover {
+  text-decoration: underline;
+}
+
+.thankyou .continue-to-registration a span {
+  display: block;
+  color: currentColor;
+}
+
+.thankyou a[title="Facebook"] {
+  background: url(/images/icons/facebook.png);
+  background-repeat: no-repeat;
+  width: 111px;
+  height: 33px;
+  display: inline-block;
+}
+
+.thankyou .social {
+  margin-top: 2rem;
+  display: flex;
+  gap: 0 1rem;
+}
+
+.thankyou a[title="Twitter"] {
+  width: 90px;
+  height: 33px;
+  background-repeat: no-repeat;
+  background-image: url(/images/icons/twitter.png);
+  display: inline-block;
+}
+
+.thankyou a[title="Facebook"] span,
+.thankyou a[title="Twitter"] span {
+  position: absolute;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 1000px) {
+  .thankyou .image-link-container {
+    flex-direction: column;
+  }
+
+  .thankyou h1 {
+    font-size: 44px;
+  }
+
+  .thankyou .image-link-container img {
+    max-width: 280px;
+  }
+
+  .thankyou .continue-to-registration a {
+    font-size: 31px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .thankyou .continue-to-registration a {
+    font-size: 22px;
+  }
+}

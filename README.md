@@ -26,3 +26,11 @@ Uses [enroll-age.css](css/enroll-age.css)
 [PHP](./standalone/register.php)
 
 Uses [register.css](./css/register.css)
+
+---
+
+## Thankyou
+
+[PHP](./standalone/thankyou.php)
+
+Uses [thankyou.css](./css/thankyou.css)

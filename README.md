@@ -20,3 +20,9 @@ Uses [enroll-index.css](css/enroll-index.css)
 Uses [enroll-age.css](css/enroll-age.css)
 
 ---
+
+## Registration
+
+[PHP](./standalone/register.php)
+
+Uses [register.css](./css/register.css)

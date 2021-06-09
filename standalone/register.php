@@ -28,7 +28,7 @@ var decrement = function() {
             timer.innerHTML = "";
         }
     }
-    countdown.innerHTML = min + ":" + String(sec).padStart(2, "0");
+    countdown.innerHTML = `<div class="amount hours">00<span>Hours</span></div><div class="amount minutes">${min}<span>Minutes</span></div><div class="amount seconds">${String(sec).padStart(2, "0")}<span>Seconds</span></div>`;
 }
 decrement();
 var decrementer = setInterval(decrement, 1000);
@@ -41,43 +41,45 @@ echo '</section>';
 echo '<section class="right-section">';
 
 echo $form->open();
-echo $html->div('Register to attend for FREE now:');
+echo $html->div('Register to attend for FREE now:', array('class' => 'register-header', 'role' => 'heading'));
 
-$args = array('name' => 'first', 'label' => 'First name');
+$args = array('name' => 'first', 'label' => '', 'placeholder' => 'Your First Name Here…', 'class' => 'no-label');
 echo $html->div($form->input($args));
 
-$args = array('name' => 'last', 'label' => 'Last name');
+$args = array('name' => 'last', 'label' => '', 'placeholder' => 'Your Last Name Here…', 'class' => 'no-label');
 echo $html->div($form->input($args));
 
-$args = array('name' => 'email', 'label' => 'Email', 'value' => (isset($_SESSION['email']) ? $_SESSION['email'] : ''));
+$args = array('name' => 'email', 'label' => '', 'placeholder' => 'Your Email Address…', 'class' => 'no-label', 'value' => (isset($_SESSION['email']) ? $_SESSION['email'] : ''));
 echo $html->div($form->email($args));
 
-$args = array('name' => 'phone', 'label' => 'Telephone');
+$args = array('name' => 'phone', 'label' => '', 'placeholder' => 'Your Telephone Number Here…', 'class' => 'no-label');
 echo $html->div($form->input($args));
 
 $form->checkboxes(array('name' => 'sms-opt-in', 'options' => array(1 => 'Yes, send me important alerts via SMS/text (optional)')));
-echo $html->div(current($form->checkboxes));
+echo $html->div(current($form->checkboxes), array('class' => 'checkbox-container'));
 
-$args = array('name' => 'address', 'label' => 'Address');
+$args = array('name' => 'address', 'label' => 'Address', 'placeholder' => 'Your Address…');
 echo $html->div($form->input($args));
 
-$args = array('name' => 'city', 'label' => 'city');
+$args = array('name' => 'city', 'label' => 'City', 'placeholder' => 'City…');
 echo $html->div($form->input($args));
 
-$args = array('name' => 'state', 'label' => 'State/province');
-echo $html->div($form->input($args));
+echo '<div class="flex-row state-zip">';
+$args = array('name' => 'state', 'label' => 'State/province', 'placeholder' => 'State/province…');
+echo $html->div($form->input($args), array('class' => 'row-state'));
 
-$args = array('name' => 'zip', 'label' => 'Zip code');
-echo $html->div($form->input($args));
+$args = array('name' => 'zip', 'label' => 'Zip code', 'placeholder' => 'Zip code…');
+echo $html->div($form->input($args), array('class' => 'row-zip'));
+echo '</div>';
 
 $countries = get::helper('data')->countries();
 $countries = array_merge(array('US' => $countries['US']), $countries);
 echo $html->div($form->select(array('label' => 'Country', 'name' => 'country', 'options' => $countries, 'prependBlank' => true)));
 
 echo '<fieldset><legend>Birthday</legend>';
-echo $html->div($form->select(array('label' => '', 'name' => 'dob-month', 'options' => get::component('data')->months()))
-    . $form->select(array('label' => '', 'name' => 'dob-day', 'options' => range(1, 31), 'addBreak' => false))
-    . $form->select(array('label' => '', 'name' => 'dob-year', 'options' => range((date('Y') - 12), (date('Y') - 99)), 'addBreak' => false))
+echo $html->div($html->div($form->select(array('label' => '', 'name' => 'dob-month', 'options' => get::component('data')->months())))
+    . $html->div($form->select(array('label' => '', 'name' => 'dob-day', 'options' => range(1, 31), 'addBreak' => false)))
+    . $html->div($form->select(array('label' => '', 'name' => 'dob-year', 'options' => range((date('Y') - 12), (date('Y') - 99)), 'addBreak' => false))), array('class' => 'flex-row year-month-day')
 );
 echo '</fieldset>';
 
@@ -96,7 +98,7 @@ echo $html->div($form->input($args));
 $vyOptions = get::$vyOptions;
 $select = array('label' => 'Check all that apply to you:', 'name' => 'vy', 'options' => $vyOptions);
 echo $html->div($form->checkboxes($select));
-echo $html->div($form->textarea(array('name' => 'vyexplain', 'label' => 'Provide relevant details about all checked above')));
+echo $html->div($form->textarea(array('cols' => '', 'name' => 'vyexplain', 'label' => 'Provide relevant details about all checked above')));
 
 $args = array('name' => 'foster-agency', 'label' => 'Foster care agency (if applicable)');
 echo $html->div($form->input($args));

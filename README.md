@@ -34,3 +34,11 @@ Uses [register.css](./css/register.css)
 [PHP](./standalone/thankyou.php)
 
 Uses [thankyou.css](./css/thankyou.css)
+
+---
+
+## Completed
+
+[PHP](./standalone/completed.php)
+
+Uses [completed.css](./css/completed.css)

@@ -4,7 +4,7 @@ body {
   margin: 0;
 }
 
-.thankyou {
+.thankyouwrapper {
   box-sizing: border-box;
   background: url(/images/bg/mountains.jpeg) transparent no-repeat 0 0 fixed;
   background-size: cover;
@@ -13,7 +13,7 @@ body {
   padding: 10px;
 }
 
-.thankyou .container {
+.thankyouwrapper .container {
   padding-top: 35px;
   outline: none;
   background-color: rgba(178, 0, 0, 0.55);
@@ -44,7 +44,7 @@ body {
   }
 }
 
-.thankyou h1 {
+.thankyouwrapper h1 {
   font-family: "Rock Salt", sans-serif;
   color: white;
   font-size: 60px;
@@ -53,7 +53,7 @@ body {
   animation: 0.65s bounce-and-grow 0.25s;
 }
 
-.thankyou h1::after {
+.thankyouwrapper h1::after {
   content: "";
   border-bottom: 5px solid currentColor;
   width: 80%;
@@ -63,17 +63,17 @@ body {
   left: 50%;
 }
 
-.thankyou .image-link-container {
+.thankyouwrapper .image-link-container {
   display: flex;
   align-items: center;
   gap: 0 3rem;
 }
 
-.thankyou .image-link-container img {
+.thankyouwrapper .image-link-container img {
   max-width: 192px;
 }
 
-.thankyou .continue-to-registration {
+.thankyouwrapper .continue-to-registration {
   white-space: nowrap;
   margin-top: 15px;
   outline: none;
@@ -88,7 +88,7 @@ body {
   padding: 1rem 2.5rem;
 }
 
-.thankyou .continue-to-registration a {
+.thankyouwrapper .continue-to-registration a {
   text-decoration: none;
   color: rgb(255, 28, 12);
   font-size: 50px;
@@ -97,16 +97,16 @@ body {
   text-transform: capitalize;
 }
 
-.thankyou .continue-to-registration a:hover {
+.thankyouwrapper .continue-to-registration a:hover {
   text-decoration: underline;
 }
 
-.thankyou .continue-to-registration a span {
+.thankyouwrapper .continue-to-registration a span {
   display: block;
   color: currentColor;
 }
 
-.thankyou a[title="Facebook"] {
+.thankyouwrapper a[title="Facebook"] {
   background: url(/images/icons/facebook.png);
   background-repeat: no-repeat;
   width: 111px;
@@ -114,13 +114,13 @@ body {
   display: inline-block;
 }
 
-.thankyou .social {
+.thankyouwrapper .social {
   margin-top: 2rem;
   display: flex;
   gap: 0 1rem;
 }
 
-.thankyou a[title="Twitter"] {
+.thankyouwrapper a[title="Twitter"] {
   width: 90px;
   height: 33px;
   background-repeat: no-repeat;
@@ -128,32 +128,36 @@ body {
   display: inline-block;
 }
 
-.thankyou a[title="Facebook"] span,
-.thankyou a[title="Twitter"] span {
+.thankyouwrapper a[title="Facebook"] span,
+.thankyouwrapper a[title="Twitter"] span {
   position: absolute;
   visibility: hidden;
 }
 
 @media screen and (max-width: 1000px) {
-  .thankyou .image-link-container {
+  .thankyouwrapper .image-link-container {
     flex-direction: column;
   }
 
-  .thankyou h1 {
+  .thankyouwrapper h1 {
     font-size: 44px;
   }
 
-  .thankyou .image-link-container img {
+  .thankyouwrapper .image-link-container img {
     max-width: 280px;
   }
 
-  .thankyou .continue-to-registration a {
+  .thankyouwrapper .continue-to-registration a {
     font-size: 31px;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .thankyou .continue-to-registration a {
-    font-size: 22px;
+  .thankyouwrapper .continue-to-registration {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .thankyouwrapper .continue-to-registration a {
+    font-size: 18px;
   }
 }

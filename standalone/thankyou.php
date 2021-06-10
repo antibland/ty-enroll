@@ -8,7 +8,7 @@ echo '<link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap
 echo '<link rel="preconnect" href="https://fonts.gstatic.com">';
 echo '<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">';
 
-echo '<div class="thankyou">';
+echo '<div class="thankyouwrapper">';
 
 echo '<div class="container">';
 
@@ -25,4 +25,4 @@ echo $html->div($html->link('https://www.facebook.com/sharer/sharer.php?u=https%
               . $html->link('https://twitter.com/intent/tweet?url=https%3A%2F%2Fenroll.techieyouth.org&text=Learn%20How%20to%20Earn%20Money%20Online%20From%20Anywhere%20in%20the%20World%3A&via=techieyouth', '<span>Twitter</span>', $linkTarget), array('class' => 'social'));
 
 echo '</div>'; # end .container
-echo '</div>'; # end .thankyou
+echo '</div>'; # end .thankyouwrapper 

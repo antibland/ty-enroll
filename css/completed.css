@@ -1,0 +1,115 @@
+:root {
+  --completed-red: rgb(246, 23, 41);
+  --completed-blue: rgb(13, 128, 214);
+  --completed-green: rgb(93, 171, 36);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.completed-wrapper {
+  background: url(/images/bg/completed-blue.jpeg) transparent 0 0 no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.completed-wrapper .container {
+  background-color: #fdfdfd;
+  border-radius: 5px;
+  padding: 40px 60px;
+  margin: 0px auto;
+  outline: none;
+  width: min(80%, 1000px);
+  max-width: 100%;
+  text-align: center;
+}
+
+.completed-wrapper h1 {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 46px;
+  color: rgb(45, 45, 45);
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.completed-wrapper h1::after {
+  content: "";
+  position: absolute;
+  bottom: -2rem;
+  width: 3.5rem;
+  border: 2px solid var(--completed-red);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.completed-wrapper .you-have-completed,
+.completed-wrapper .inner-circle,
+.completed-wrapper h2 {
+  font-family: Raleway, Helvetica, sans-serif !important;
+  letter-spacing: 1px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.completed-wrapper .you-have-completed {
+  color: var(--completed-green);
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.completed-wrapper h2 {
+  font-size: 26px;
+  color: var(--completed-blue);
+}
+
+.completed-wrapper h2 a {
+  color: var(--completed-red);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.completed-wrapper h2 a:hover {
+  text-decoration: underline;
+}
+
+.completed-wrapper a[title="Facebook"] {
+  background: url(/images/icons/facebook.png);
+  background-repeat: no-repeat;
+  width: 111px;
+  height: 33px;
+  display: inline-block;
+}
+
+.completed-wrapper .social {
+  margin: 1rem 0 2rem;
+  display: flex;
+  gap: 0 1rem;
+  justify-content: center;
+  border-bottom: 1px solid black;
+  padding-bottom: 2rem;
+}
+
+.completed-wrapper a[title="Twitter"] {
+  width: 90px;
+  height: 33px;
+  background-repeat: no-repeat;
+  background-image: url(/images/icons/twitter.png);
+  display: inline-block;
+}
+
+.completed-wrapper a[title="Facebook"] span,
+.completed-wrapper a[title="Twitter"] span {
+  position: absolute;
+  visibility: hidden;
+}
+
+.completed-wrapper .next-steps p {
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-family: Raleway, Helvetica, sans-serif !important;
+}

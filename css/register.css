@@ -93,6 +93,8 @@ html {
   display: flex;
   gap: 0 1rem;
   align-items: flex-end;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .register .year-month-day > * {
